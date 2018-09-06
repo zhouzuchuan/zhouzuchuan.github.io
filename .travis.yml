@@ -30,4 +30,4 @@ branches:
 env:
     # 全局变量
     global:
-        - GH_REF: github.com/zhouzuchuan/fezzc.github.io.git
+        - GH_REF: github.com/zhouzuchuan/zhouzuchuan.github.io.git
