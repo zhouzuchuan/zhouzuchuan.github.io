@@ -11,8 +11,8 @@ cd ../
 mv .deploy_git/.git/ ./public/
 cd ./public
 
-git config user.name  "fezzc"
-git config user.email "zhouzuchuan@icloud.com"
+git config user.name  "zhouzuchuan"
+git config user.email "zhouzuchuan@sina.com"
 # add commit timestamp
 
 git add .
