@@ -13,7 +13,7 @@ cache:
 
 before_install:
     # 更改时区
-    - export TZ='Asia/Hefei'
+    - export TZ='Asia/ShangHai'
 
     - npm install hexo-cli -g
 
