@@ -19,7 +19,9 @@ new Date().valueOf();
 
 new Date().getTime();
 
-newDate() * 1 + newDate();
+newDate() * 1
+
++newDate();
 ```
 
 `864e5` 是一天的毫秒数，采用的是科学计数法 等同于 `86400000`
