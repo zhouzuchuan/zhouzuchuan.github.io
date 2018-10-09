@@ -35,12 +35,13 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: 'Hexo, NexT'
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+# 设置rss
+rss: /atom.xml
 
 footer:
   # Specify the date when the site was setup.
@@ -51,7 +52,7 @@ footer:
   icon: user
 
   # If not defined, will be used `author` from Hexo main config.
-  copyright:
+  ? copyright
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
   powered: true
@@ -81,7 +82,6 @@ seo: false
 # subtitle: Subtitle
 index_with_subtitle: false
 
-
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -93,18 +93,17 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
+  # about: /about/ || user
+  # tags: /tags/ || tags
+  # categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+  # commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
 menu_icons:
   enable: true
-
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -116,7 +115,6 @@ scheme: Muse
 #scheme: Pisces
 #scheme: Gemini
 
-
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
@@ -127,16 +125,16 @@ scheme: Muse
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 #social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
-  #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
-  #FB Page: https://www.facebook.com/yourname || facebook
-  #VK Group: https://vk.com/yourname || vk
-  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-  #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
-  #Skype: skype:yourname?call|chat || skype
+#GitHub: https://github.com/yourname || github
+#E-Mail: mailto:yourname@gmail.com || envelope
+#Google: https://plus.google.com/yourname || google
+#Twitter: https://twitter.com/yourname || twitter
+#FB Page: https://www.facebook.com/yourname || facebook
+#VK Group: https://vk.com/yourname || vk
+#StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+#YouTube: https://youtube.com/yourname || youtube
+#Instagram: https://instagram.com/yourname || instagram
+#Skype: skype:yourname?call|chat || skype
 
 social_icons:
   enable: true
@@ -149,7 +147,7 @@ links_title: Links
 links_layout: block
 #links_layout: inline
 #links:
-  #Title: http://example.com/
+#Title: http://example.com/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -199,7 +197,6 @@ sidebar:
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
 
-
 # ---------------------------------------------------------------
 # Post Settings
 # ---------------------------------------------------------------
@@ -215,8 +212,9 @@ excerpt_description: true
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
+# 设置 首页 阅读全文 功能
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Post meta display settings
@@ -237,9 +235,9 @@ post_wordcount:
 
 # Wechat Subscriber
 #wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
+#enabled: true
+#qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+#description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
 #reward_comment: Donate comment here
@@ -253,7 +251,6 @@ post_copyright:
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
-
 # ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
@@ -262,7 +259,7 @@ post_copyright:
 mobile_layout_economy: false
 
 # Android Chrome header panel color ($black-deep).
-android_chrome_color: "#222"
+android_chrome_color: '#222'
 
 # Custom Logo.
 # !!Only available for Default Scheme currently.
@@ -271,14 +268,13 @@ android_chrome_color: "#222"
 #   image: url-of-image   - Images's url
 custom_logo:
   enabled: false
-  image:
+  ? image
 
 # Code Highlight theme
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
-
 
 # ---------------------------------------------------------------
 # Font Settings
@@ -296,7 +292,7 @@ font:
   enable: false
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
-  host:
+  ? host
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -307,34 +303,33 @@ font:
   global:
     external: true
     family: Lato
-    size:
+    ? size
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
-    size:
+    ? family
+    ? size
 
   # Font settings for posts.
   # Fallback to `global` font settings.
   posts:
     external: true
-    family:
+    ? family
 
   # Font settings for Logo.
   # Fallback to `global` font settings.
   logo:
     external: true
-    family:
-    size:
+    ? family
+    ? size
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
-    size:
-
+    ? family
+    ? size
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
@@ -361,7 +356,7 @@ han: false
 # Disqus
 disqus:
   enable: false
-  shortname:
+  ? shortname
   count: true
 
 # Hypercomments
@@ -370,24 +365,22 @@ disqus:
 # changyan
 changyan:
   enable: false
-  appid:
-  appkey:
-
+  ? appid
+  ? appkey
 
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
   enable: false
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  appid: # your leancloud application appid
+  appkey: # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
-
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -426,7 +419,7 @@ gitment:
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
 #jiathis:
-  ##uid: Get this uid from http://www.jiathis.com/
+##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
 # Share
@@ -496,36 +489,36 @@ duoshuo_info:
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
 facebook_sdk:
-  enable:       false
-  app_id:       #<app_id>
-  fb_admin:     #<user_id>
-  like_button:  #true
-  webmaster:    #true
+  enable: false
+  app_id: #<app_id>
+  fb_admin: #<user_id>
+  like_button: #true
+  webmaster: #true
 
 # Facebook comments plugin
 # This plugin depends on Facebook SDK.
 # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
 facebook_comments_plugin:
-  enable:       false
-  num_of_posts: 10    # min posts num is 1
-  width:        100%  # default width is 550px
-  scheme:       light # default scheme is light (light or dark)
+  enable: false
+  num_of_posts: 10 # min posts num is 1
+  width: 100% # default width is 550px
+  scheme: light # default scheme is light (light or dark)
 
 # VKontakte API Support.
 # To get your AppID visit https://vk.com/editapp?act=create
 vkontakte_api:
-  enable:       false
-  app_id:       #<app_id>
-  like:         true
-  comments:     true
+  enable: false
+  app_id: #<app_id>
+  like: true
+  comments: true
   num_of_posts: 10
 
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
   enable: false
-  id:     #<app_id>
-  color:  fc6423
+  id: #<app_id>
+  color: fc6423
 # ---------------------------------------------------------------
 
 # Show number of visitors to each article.
@@ -553,23 +546,21 @@ busuanzi_count:
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
-  site_uv_footer:
+  ? site_uv_footer
   # custom pv span for the whole site
   site_pv: true
   site_pv_header: <i class="fa fa-eye"></i>
-  site_pv_footer:
+  ? site_pv_footer
   # custom pv span for one page only
   page_pv: true
   page_pv_header: <i class="fa fa-file-o"></i>
-  page_pv_footer:
-
+  ? page_pv_footer
 
 # Tencent analytics ID
 # tencent_analytics:
 
 # Tencent MTA ID
 # tencent_mta:
-
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
@@ -586,7 +577,7 @@ calendar:
   orderBy: startTime
   offsetMax: 24
   offsetMin: 4
-  timeZone:
+  ? timeZone
   showDeleted: false
   singleEvents: true
   maxResults: 250
@@ -599,7 +590,7 @@ algolia_search:
   labels:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}"
-    hits_stats: "${hits} results found in ${time} ms"
+    hits_stats: '${hits} results found in ${time} ms'
 
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
@@ -610,7 +601,6 @@ local_search:
   trigger: auto
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
-
 
 # ---------------------------------------------------------------
 # Tags Settings
@@ -645,7 +635,6 @@ tabs:
     tabs: false
     labels: true
   border_radius: 0
-
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -694,8 +683,8 @@ pace: false
 # pace_theme: pace-theme-center-simple
 pace_theme: pace-theme-minimal
 
-# Canvas-nest
-canvas_nest: false
+# Canvas-nest 动态背景
+canvas_nest: true
 
 # three_waves
 three_waves: false
@@ -728,81 +717,80 @@ vendors:
   _internal: lib
 
   # Internal version: 2.1.3
-  jquery:
+  ? jquery
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
-  fancybox:
-  fancybox_css:
+  ? fancybox
+  ? fancybox_css
 
   # Internal version: 1.0.6
   # See: https://github.com/ftlabs/fastclick
-  fastclick:
+  ? fastclick
 
   # Internal version: 1.9.7
   # See: https://github.com/tuupola/jquery_lazyload
-  lazyload:
+  ? lazyload
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity:
+  ? velocity
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity_ui:
+  ? velocity_ui
 
   # Internal version: 0.7.9
   # See: https://faisalman.github.io/ua-parser-js/
-  ua_parser:
+  ? ua_parser
 
   # Internal version: 4.6.2
   # See: http://fontawesome.io/
-  fontawesome:
+  ? fontawesome
 
   # Internal version: 1
   # https://www.algolia.com
-  algolia_instant_js:
-  algolia_instant_css:
+  ? algolia_instant_js
+  ? algolia_instant_css
 
   # Internal version: 1.0.2
   # See: https://github.com/HubSpot/pace
   # Or use direct links below:
   # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
   # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
-  pace:
-  pace_css:
+  ? pace
+  ? pace_css
 
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
-  canvas_nest:
+  ? canvas_nest
 
   # three
-  three:
+  ? three
 
   # three_waves
   # https://github.com/jjandxa/three_waves
-  three_waves:
+  ? three_waves
 
   # three_waves
   # https://github.com/jjandxa/canvas_lines
-  canvas_lines:
+  ? canvas_lines
 
   # three_waves
   # https://github.com/jjandxa/canvas_sphere
-  canvas_sphere:
+  ? canvas_sphere
 
   # Internal version: 1.0.0
   # https://github.com/zproo/canvas-ribbon
-  canvas_ribbon:
+  ? canvas_ribbon
 
   # Internal version: 3.3.0
   # https://github.com/ethantw/Han
-  han:
+  ? han
 
   # needMoreShare2
   # https://github.com/revir/need-more-share2
-  needMoreShare2:
-
+  ? needMoreShare2
 
 # Assets
 css: css

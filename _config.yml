@@ -81,3 +81,8 @@ deploy:
     type: git
     repository: https://github.com/zhouzuchuan/zhouzuchuan.github.io.git
     branch: master
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+# rss插件
+plugins: hexo-generate-feed
